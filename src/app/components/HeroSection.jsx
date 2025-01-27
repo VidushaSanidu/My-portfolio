@@ -28,7 +28,8 @@ const HeroSection = () => {
             />
           </h1>
           <p className="text-[#ADB7BE] text-base sm:text-base mb-6 lg:text-xl">
-            Enthusiastic | <span className="text-primary-400">Inspiring</span> |
+            Enthusiastic
+            <span className="text-primary-400 px-3">| Inspiring |</span>
             Perfection
           </p>
           <div>

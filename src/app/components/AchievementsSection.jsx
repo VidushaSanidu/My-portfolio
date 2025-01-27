@@ -1,39 +1,49 @@
 "use client";
 
-import React from "react";
-import dynamic from "next/dynamic";
-
-const AnimatedNumbers = dynamic(
-  () => {
-    return import("react-animated-numbers");
-  },
-  { ssr: false }
-);
+import React, { useEffect, useRef } from "react";
+import { animate } from "framer-motion";
 
 const achievementsList = [
   {
     metric: "Projects",
-    value: "5",
+    value: 6,
     postfix: "+",
   },
   {
-    prefix: "~",
     metric: "Users",
-    value: "100,000",
+    value: 100,
+    postfix: "+",
   },
   {
-    metric: "Awards",
-    value: "7",
+    metric: "Achievments",
+    value: 7,
   },
   {
     metric: "Years",
-    value: "3",
+    value: 3,
+    postfix: "+",
   },
 ];
 
+function Counter({ from, to }) {
+  const ref = useRef();
+
+  useEffect(() => {
+    const controls = animate(from, to, {
+      duration: 1,
+      onUpdate(value) {
+        ref.current.textContent = value.toFixed(0);
+      },
+    });
+    return () => controls.stop();
+  }, [from, to]);
+
+  return <p ref={ref} />;
+}
+
 const AchievementsSection = () => {
   return (
-    <div className="py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
+    <div className="py-8 px-4 xl:gap-16 sm:py-12 xl:px-12">
       <div className="sm:border-[#33353F] sm:border rounded-md py-8 px-16 flex flex-col sm:flex-row items-center justify-between">
         {achievementsList.map((achievement, index) => {
           return (
@@ -43,19 +53,7 @@ const AchievementsSection = () => {
             >
               <h2 className="text-white text-4xl font-bold flex flex-row">
                 {achievement.prefix}
-                <AnimatedNumbers
-                  includeComma
-                  animateToNumber={parseInt(achievement.value)}
-                  locale="en-US"
-                  className="text-white text-4xl font-bold"
-                  configs={(_, index) => {
-                    return {
-                      mass: 1,
-                      friction: 100,
-                      tensions: 140 * (index + 1),
-                    };
-                  }}
-                />
+                <Counter from={0} to={achievement.value} />
                 {achievement.postfix}
               </h2>
               <p className="text-[#ADB7BE] text-base">{achievement.metric}</p>
