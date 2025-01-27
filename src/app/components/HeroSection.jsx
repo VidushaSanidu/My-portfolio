@@ -10,8 +10,8 @@ const HeroSection = () => {
     <section className="lg:py-12">
       <div className="grid grid-cols-1 sm:grid-cols-12">
         <motion.div
-          initial={{ opacity: 0, scale: 0.5 }}
-          animate={{ opacity: 1, scale: 1 }}
+          initial={{ opacity: 0, x: -100 }}
+          animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
           className="col-span-8 place-self-center text-center sm:text-left justify-self-start"
         >
@@ -49,16 +49,16 @@ const HeroSection = () => {
           </div>
         </motion.div>
         <motion.div
-          initial={{ opacity: 0, scale: 0.5 }}
-          animate={{ opacity: 1, scale: 1 }}
+          initial={{ opacity: 0, x: 100 }}
+          animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
           className="col-span-4 place-self-center mt-4 lg:mt-0"
         >
-          <div className="rounded-full bg-[#181818] w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] relative">
+          <div className=" rounded-r-full  from-gray-800 to-gray-200 bg-gradient-to-b p-2 w-[250px] h-[250px] lg:w-[400px] lg:h-[420px] relative">
             <Image
-              src="/images/hero-image.png"
+              src="/images/my-image.jpg"
               alt="hero image"
-              className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+              className="absolute rounded-l-full h-full w-full transform -translate-x-1/2 -translate-y-1/2 top-48 left-56"
               width={300}
               height={300}
             />
