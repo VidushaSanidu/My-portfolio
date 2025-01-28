@@ -55,7 +55,7 @@ const HeroSection = () => {
           transition={{ duration: 0.5 }}
           className="col-span-4 place-self-center mt-4 lg:mt-0"
         >
-          <div className=" rounded-r-full  from-gray-800 to-gray-200 bg-gradient-to-b p-2 w-[250px] h-[250px] lg:w-[400px] lg:h-[420px] relative">
+          <div className=" rounded-r-full  from-gray-800 to-purple-200 bg-gradient-to-b p-2 w-[250px] h-[250px] lg:w-[400px] lg:h-[420px] relative">
             <Image
               src="/images/my-image.jpg"
               alt="hero image"
