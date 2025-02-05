@@ -79,19 +79,19 @@ const EmailSection = () => {
               className="hover:opacity-80 transition-opacity"
             >
               <Image
-                height={10}
-                width={10}
+                height={45}
+                width={45}
                 src={LinkedinIcon}
                 alt="Linkedin Icon"
               />
             </Link>
           </div>
         </div>
-        <div className="pt-4">
+        <div className="pt-5">
           <a href="https://www.buymeacoffee.com/vidushaSanidu">
             <Image
-              height={10}
-              width={10}
+              height={200}
+              width={200}
               alt="coffee"
               src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=☕&slug=vidushaSanidu&button_colour=BD5FFF&font_colour=ffffff&font_family=Lato&outline_colour=000000&coffee_colour=FFDD00"
             />
