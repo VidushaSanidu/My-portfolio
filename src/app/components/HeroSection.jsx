@@ -56,11 +56,11 @@ const HeroSection = () => {
           transition={{ duration: 0.5 }}
           className="col-span-4 place-self-center mt-4 lg:mt-0"
         >
-          <div className=" rounded-r-full  from-gray-800 to-purple-200 bg-gradient-to-b p-2 w-[250px] h-[250px] lg:w-[400px] lg:h-[420px] relative">
+          <div className=" rounded-full md:rounded-none md:rounded-r-full  from-gray-800 to-purple-200 bg-gradient-to-b p-2 w-[250px] h-[250px] lg:w-[400px] lg:h-[420px] relative">
             <Image
               src="/images/my-image.jpg"
               alt="hero image"
-              className="absolute rounded-l-full h-full w-full transform -translate-x-1/2 -translate-y-1/2 top-48 left-56"
+              className="absolute rounded-full md:rounded-none md:rounded-l-full h-full w-full transform -translate-x-1/2 -translate-y-1/2 top-32 md:top-48 left-24 md:left-56"
               width={300}
               height={300}
             />
