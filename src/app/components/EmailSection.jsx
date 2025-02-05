@@ -55,10 +55,10 @@ const EmailSection = () => {
           Let&apos;s Connect
         </h3>
         <p className="text-[#ADB7BE] mb-6">
-          I'm actively seeking new opportunities in both software development
-          and AI projects. Whether you need technical expertise, have a project
-          in mind, or just want to discuss technology, I'm always eager to
-          connect!
+          I&apos;m actively seeking new opportunities in both software
+          development and AI projects. Whether you need technical expertise,
+          have a project in mind, or just want to discuss technology, I&apos;m
+          always eager to connect!
         </p>
         <div className="flex flex-col gap-6 md:flex-row md:justify-between items-center">
           <div className="socials flex gap-4 items-center">
@@ -78,7 +78,12 @@ const EmailSection = () => {
               href="https://linkedin.com/in/vidusha-sanidu-867a84214"
               className="hover:opacity-80 transition-opacity"
             >
-              <Image src={LinkedinIcon} alt="Linkedin Icon" />
+              <Image
+                height={10}
+                width={10}
+                src={LinkedinIcon}
+                alt="Linkedin Icon"
+              />
             </Link>
           </div>
         </div>
